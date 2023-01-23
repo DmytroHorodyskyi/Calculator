@@ -16,6 +16,7 @@
 		744482932975258F00BFE244 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744482922975258F00BFE244 /* CalculatorTests.swift */; };
 		7444829D2975258F00BFE244 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444829C2975258F00BFE244 /* CalculatorUITests.swift */; };
 		7444829F2975258F00BFE244 /* CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444829E2975258F00BFE244 /* CalculatorUITestsLaunchTests.swift */; };
+		7458B925297DDC0E00A846E4 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7458B924297DDC0E00A846E4 /* Operation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		744482982975258F00BFE244 /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7444829C2975258F00BFE244 /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		7444829E2975258F00BFE244 /* CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7458B924297DDC0E00A846E4 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				7444827B2975258E00BFE244 /* AppDelegate.swift */,
 				7444827D2975258E00BFE244 /* SceneDelegate.swift */,
+				7458B924297DDC0E00A846E4 /* Operation.swift */,
 				7444827F2975258E00BFE244 /* ViewController.swift */,
 				744482812975258E00BFE244 /* Main.storyboard */,
 				744482842975258F00BFE244 /* Assets.xcassets */,
@@ -261,6 +264,7 @@
 				744482802975258E00BFE244 /* ViewController.swift in Sources */,
 				7444827C2975258E00BFE244 /* AppDelegate.swift in Sources */,
 				7444827E2975258E00BFE244 /* SceneDelegate.swift in Sources */,
+				7458B925297DDC0E00A846E4 /* Operation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

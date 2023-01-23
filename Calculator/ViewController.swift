@@ -23,7 +23,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var auxiliaryLabel: UILabel!
     
     //---------------------------------------------------------------------------------------
-    
     var previousValue = ""
     
     var currentValue = ""
@@ -40,6 +39,41 @@ class ViewController: UIViewController {
         auxiliaryLabel.text = ""
     }
     //---------------------------------------------------------------------------------------
+    func operation(_ operation:Operations){
+        if currentOperation != .Nil && previousValue != ""{
+            if runningNumber != "" {
+                auxiliaryLabel.text! += runningNumber
+                currentValue = runningNumber
+                runningNumber = ""
+                        
+                if currentOperation == .Add {
+                    result = "\(Double(previousValue)! + Double (currentValue)!)"
+                }else if currentOperation == .Subtract {
+                    result = "\(Double(previousValue)! - Double(currentValue)!)"
+                }else if currentOperation == .Multiply {
+                    result = "\(Double(previousValue)! * Double (currentValue)!)"
+                }else if currentOperation == .Divide {
+                    result = "\(Double (previousValue)! / Double (currentValue)!)"
+                }
+                previousValue = result
+                if (Double (result)!.truncatingRemainder(dividingBy: 1) == 0) {
+                    result = "\(Int(Double (result)!))"
+                    }
+                mainLabel.text = result
+            }
+            currentOperation = operation
+        }else {
+            auxiliaryLabel.text! += runningNumber
+            previousValue = runningNumber
+            runningNumber = ""
+            currentOperation = operation
+            mainLabel.text = operation.rawValue
+            auxiliaryLabel.text! += operation.rawValue
+            
+        }
+    }
+    //---------------------------------------------------------------------------------------
+    
     @IBAction func enterDigitTap(_ sender: UIButton) {
         if sender.tag == 10{
             runningNumber += "000"
@@ -101,40 +135,6 @@ class ViewController: UIViewController {
     @IBAction func equalsTap(_ sender: UIButton) {
         operation(currentOperation)
         auxiliaryLabel.text! += "="
-    }
-    
-    func operation(_ operation:Operations){
-        if currentOperation != .Nil && previousValue != ""{
-            if runningNumber != "" {
-                auxiliaryLabel.text! += runningNumber
-                currentValue = runningNumber
-                runningNumber = ""
-                        
-                if currentOperation == .Add {
-                    result = "\(Double(previousValue)! + Double (currentValue)!)"
-                }else if currentOperation == .Subtract {
-                    result = "\(Double(previousValue)! - Double(currentValue)!)"
-                }else if currentOperation == .Multiply {
-                    result = "\(Double(previousValue)! * Double (currentValue)!)"
-                }else if currentOperation == .Divide {
-                    result = "\(Double (previousValue)! / Double (currentValue)!)"
-                }
-                previousValue = result
-                if (Double (result)!.truncatingRemainder(dividingBy: 1) == 0) {
-                    result = "\(Int(Double (result)!))"
-                    }
-                mainLabel.text = result
-            }
-            currentOperation = operation
-        }else {
-            auxiliaryLabel.text! += runningNumber
-            previousValue = runningNumber
-            runningNumber = ""
-            currentOperation = operation
-            mainLabel.text = operation.rawValue
-            auxiliaryLabel.text! += operation.rawValue
-            
-        }
     }
 }
 
