@@ -459,7 +459,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nZU-7I-ahq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="002-rE-GpT"/>
                             <constraint firstItem="nZU-7I-ahq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Pp-XJ-3oM"/>

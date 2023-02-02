@@ -7,134 +7,100 @@
 
 import UIKit
 
-enum Operations:String {
-    case Add = "+"
-    case Subtract = "-"
-    case Multiply = "*"
-    case Divide = "/"
-    case Nil = "nil"
-    
-}
-
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var mainLabel: UILabel!
     
     @IBOutlet weak var auxiliaryLabel: UILabel!
     
-    //---------------------------------------------------------------------------------------
-    var previousValue = ""
+    var model = Operation()
     
-    var currentValue = ""
+    var equalsWasDisplayed = false
     
-    var result = ""
-    
-    var runningNumber = ""
-    
-    var currentOperation:Operations = .Nil
-    //---------------------------------------------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
         mainLabel.text = "0"
         auxiliaryLabel.text = ""
     }
-    //---------------------------------------------------------------------------------------
-    func operation(_ operation:Operations){
-        if currentOperation != .Nil && previousValue != ""{
-            if runningNumber != "" {
-                auxiliaryLabel.text! += runningNumber
-                currentValue = runningNumber
-                runningNumber = ""
-                        
-                if currentOperation == .Add {
-                    result = "\(Double(previousValue)! + Double (currentValue)!)"
-                }else if currentOperation == .Subtract {
-                    result = "\(Double(previousValue)! - Double(currentValue)!)"
-                }else if currentOperation == .Multiply {
-                    result = "\(Double(previousValue)! * Double (currentValue)!)"
-                }else if currentOperation == .Divide {
-                    result = "\(Double (previousValue)! / Double (currentValue)!)"
-                }
-                previousValue = result
-                if (Double (result)!.truncatingRemainder(dividingBy: 1) == 0) {
-                    result = "\(Int(Double (result)!))"
-                    }
-                mainLabel.text = result
-            }
-            currentOperation = operation
-        }else {
-            auxiliaryLabel.text! += runningNumber
-            previousValue = runningNumber
-            runningNumber = ""
-            currentOperation = operation
+    
+    
+    
+    func setLabelsForOperators(_ operation: OperatorType) {
+        if model.previousNumber != "" {
             mainLabel.text = operation.rawValue
-            auxiliaryLabel.text! += operation.rawValue
-            
+            if model.previousNumber.last == "." {
+                model.previousNumber.removeLast()
+            }
+            auxiliaryLabel.text = model.previousNumber + operation.rawValue
+            equalsWasDisplayed = false
         }
     }
-    //---------------------------------------------------------------------------------------
     
     @IBAction func enterDigitTap(_ sender: UIButton) {
+        if equalsWasDisplayed {
+            model.clear()
+            mainLabel.text = "0"
+            auxiliaryLabel.text = ""
+            equalsWasDisplayed = false
+        }
         if sender.tag == 10{
-            runningNumber += "000"
-            mainLabel.text = runningNumber
-            //auxiliaryLabel.text! += "000"
+            model.enterDigit("000")
+            mainLabel.text = model.runningNumber
         } else {
-            runningNumber += "\(sender.tag)"
-            mainLabel.text = runningNumber
-            //auxiliaryLabel.text! += "\(sender.tag)"
+            model.enterDigit("\(sender.tag)")
+            mainLabel.text = model.runningNumber
         }
     }
     
     @IBAction func dotTap(_ sender: UIButton) {
-        runningNumber += "."
-        mainLabel.text! += runningNumber
+        model.enterDigit(".")
+        mainLabel.text = model.runningNumber
     }
     
     @IBAction func clearTap(_ sender: UIButton) {
-        currentValue = ""
-        previousValue = ""
-        runningNumber = ""
-        result = ""
-        currentOperation = .Nil
+        model.clear()
         mainLabel.text = "0"
         auxiliaryLabel.text = ""
+        equalsWasDisplayed = false
     }
     
     @IBAction func plusminusTap(_ sender: UIButton) {
-        //auxiliaryLabel.text! -= runningNumber
-        runningNumber = String(Double(runningNumber)! - 2 * Double(runningNumber)!)
-        
+        model.changeSign()
     }
     
     @IBAction func percentTap(_ sender: UIButton) {
-        runningNumber = String(Double(previousValue)! / 100 * Double(runningNumber)!)
-        auxiliaryLabel.text! += "%"
+        model.percent()
+        mainLabel.text = model.percentNumber
+        equalsWasDisplayed = false
     }
     
     @IBAction func divideTap(_ sender: UIButton) {
-        operation( .Divide)
-        //auxiliaryLabel.text! += "/"
+        model.operation( .Divide)
+        setLabelsForOperators(.Divide)
     }
     
     @IBAction func multiplyTap(_ sender: UIButton) {
-        operation( .Multiply)
-        //auxiliaryLabel.text! += "*"
+        model.operation( .Multiply)
+        setLabelsForOperators(.Multiply)
     }
     
     @IBAction func subtractTap(_ sender: UIButton) {
-        operation( .Subtract)
-        //auxiliaryLabel.text! += "-"
+        model.operation( .Subtract)
+        setLabelsForOperators(.Subtract)
     }
     
     @IBAction func addTap(_ sender: UIButton) {
-        operation( .Add)
-        //auxiliaryLabel.text! += "+"
+        model.operation( .Add)
+        setLabelsForOperators(.Add)
     }
     
     @IBAction func equalsTap(_ sender: UIButton) {
-        operation(currentOperation)
-        auxiliaryLabel.text! += "="
+        if !equalsWasDisplayed && model.previousNumber != ""{
+            model.operation(model.currentOperation)
+            auxiliaryLabel.text? += (mainLabel.text ?? "") + "="
+            mainLabel.text = model.result
+            equalsWasDisplayed = true
+        }
     }
 }
 

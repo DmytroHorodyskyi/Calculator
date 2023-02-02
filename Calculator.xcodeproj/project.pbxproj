@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7409FCB8297ECB0A000A38A8 /* OperatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7409FCB7297ECB0A000A38A8 /* OperatorType.swift */; };
 		7444827C2975258E00BFE244 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444827B2975258E00BFE244 /* AppDelegate.swift */; };
 		7444827E2975258E00BFE244 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444827D2975258E00BFE244 /* SceneDelegate.swift */; };
 		744482802975258E00BFE244 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444827F2975258E00BFE244 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7409FCB7297ECB0A000A38A8 /* OperatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorType.swift; sourceTree = "<group>"; };
 		744482782975258E00BFE244 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7444827B2975258E00BFE244 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7444827D2975258E00BFE244 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				7444827B2975258E00BFE244 /* AppDelegate.swift */,
 				7444827D2975258E00BFE244 /* SceneDelegate.swift */,
 				7458B924297DDC0E00A846E4 /* Operation.swift */,
+				7409FCB7297ECB0A000A38A8 /* OperatorType.swift */,
 				7444827F2975258E00BFE244 /* ViewController.swift */,
 				744482812975258E00BFE244 /* Main.storyboard */,
 				744482842975258F00BFE244 /* Assets.xcassets */,
@@ -263,6 +266,7 @@
 			files = (
 				744482802975258E00BFE244 /* ViewController.swift in Sources */,
 				7444827C2975258E00BFE244 /* AppDelegate.swift in Sources */,
+				7409FCB8297ECB0A000A38A8 /* OperatorType.swift in Sources */,
 				7444827E2975258E00BFE244 /* SceneDelegate.swift in Sources */,
 				7458B925297DDC0E00A846E4 /* Operation.swift in Sources */,
 			);
