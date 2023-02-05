@@ -66,6 +66,7 @@ class ViewController: UIViewController {
     
     @IBAction func plusminusTap(_ sender: UIButton) {
         model.changeSign()
+        mainLabel.text = model.runningNumber
     }
     
     @IBAction func percentTap(_ sender: UIButton) {

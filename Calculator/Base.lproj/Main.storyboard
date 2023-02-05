@@ -114,7 +114,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBK-0E-Wj6">
                                                         <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="118"/>
-                                                        <color key="backgroundColor" red="0.0089370265151513823" green="0.73975643951229653" blue="0.91157670454545459" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" red="0.38392047519793476" green="0.61940082841970667" blue="0.69131095542222232" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="/">
@@ -191,7 +191,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YG-2A-caM">
                                                         <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="118"/>
-                                                        <color key="backgroundColor" red="0.0089370265151513823" green="0.73975643951229653" blue="0.91157670454545459" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" red="0.38392047519793476" green="0.61940082841970667" blue="0.69131095542222232" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="*">
@@ -268,7 +268,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGb-yZ-Yb6">
                                                         <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="118.33333333333333"/>
-                                                        <color key="backgroundColor" red="0.0089370265151513823" green="0.73975643951229653" blue="0.91157670454545459" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" red="0.38392047519793476" green="0.61940082841970667" blue="0.69131095542222232" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="-">
@@ -345,7 +345,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbB-yp-mRk">
                                                         <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="118"/>
-                                                        <color key="backgroundColor" red="0.0089370265151513823" green="0.73975643951229653" blue="0.91157670454545459" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" red="0.38392047519793476" green="0.61940082841970667" blue="0.69131095542222232" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="+">
@@ -422,7 +422,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQi-Bj-WMl">
                                                         <rect key="frame" x="294.66666666666669" y="0.0" width="98.333333333333314" height="118"/>
-                                                        <color key="backgroundColor" red="0.0089370265151513823" green="0.73975643951229653" blue="0.91157670454545459" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" red="0.38392047519793476" green="0.61940082841970667" blue="0.69131095542222232" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="=">
@@ -459,7 +459,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0050422674980000002" green="0.28586125369999998" blue="0.3492744565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="nZU-7I-ahq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="002-rE-GpT"/>
                             <constraint firstItem="nZU-7I-ahq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Pp-XJ-3oM"/>

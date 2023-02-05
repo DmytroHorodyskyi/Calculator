@@ -101,7 +101,11 @@ struct Operation {
     
     mutating func changeSign() {
         if  runningNumber != "" && runningNumber != "0" {
-            runningNumber = "\(-(Double(runningNumber) ?? 0))"
+            if (Double(runningNumber)?.truncatingRemainder(dividingBy: 1) == 0) {
+                runningNumber = "\(-(Int(Double (runningNumber) ?? 0)))"
+            } else {
+                runningNumber = "\(-(Double(runningNumber) ?? 0))"
+            }
         }
     }
 }
